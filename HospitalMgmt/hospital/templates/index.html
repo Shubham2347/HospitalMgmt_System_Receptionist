@@ -1,0 +1,23 @@
+{% extends "navigationbar.html" %}
+    {% block body %}
+    <div class="container" style="margin-top:50px">
+        <h1 class="text-center">Admin Dashbord</h1>
+        <br><br><br><br>
+        <div class="row ">
+            <div class="col-sm-4 text-center mydivstyle">
+                <h2 style="color:blue;">{{d}}</h2>
+                <a href="{% url 'view_doctor' %}"><h4 style="color:red;">Doctor</h4></a>
+            </div>
+            <div class="col-sm-4 text-center mydivstyle">
+                <h2 style="color:blue;">{{p}}</h2>
+                <a href="{% url 'view_patient' %}"><h4 style="color:red;">Patients</h4></a>
+            </div>
+            <div class="col-sm-4 text-center mydivstyle">
+                <h2 style="color:blue;">{{a}}</h2>
+                <a href="{% url 'view_appointment' %}"><h4 style="color:red;">Appointments</h4></a>
+            </div>
+        </div>
+
+       
+    </div>
+    {% endblock body %}
